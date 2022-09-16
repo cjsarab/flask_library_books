@@ -1,5 +1,4 @@
-import re
-from flask import render_template, request
+from flask import render_template, request, redirect
 from app import app
 from models.book import Book
 from models.book_list import *
@@ -24,3 +23,8 @@ def add_book():
     add_new_book(new_book)
 
     return render_template('index.html', books = books)
+
+@app.route('/books/delete/<title>', methods = ['POST'])
+def remove_book(title):
+    remove_book_by_title(title)
+    return redirect('/books')
