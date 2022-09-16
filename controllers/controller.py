@@ -20,7 +20,12 @@ def add_book():
     book_checked_out = False
     book_return_date = None
 
-    new_book = Book(book_title, book_author, book_genre, book_checked_out, book_return_date)
+    book_author_list = book_author.split()
+    author_first = str(book_author_list[0])
+    author_second = str(book_author_list[1])
+    book_author_link =  author_first + "_" + author_second
+
+    new_book = Book(book_title, book_author, book_genre, book_checked_out, book_return_date, book_author_link)
 
     add_new_book(new_book)
 
