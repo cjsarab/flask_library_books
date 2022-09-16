@@ -35,3 +35,8 @@ def remove_book(title):
 def checkout_book(title):
     checkout_book_by_title(title)
     return redirect('/books')
+
+@app.route('/books/return/<title>', methods = ['POST'])
+def return_book(title):
+    return_book_by_title(title)
+    return redirect('/books')

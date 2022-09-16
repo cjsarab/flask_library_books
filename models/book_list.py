@@ -21,7 +21,6 @@ def remove_book_by_title(book_title):
         if book.title == book_title:
             book_to_delete = book
             break
-
     books.remove(book_to_delete)
 
 def checkout_book_by_title(book_title):
@@ -30,6 +29,14 @@ def checkout_book_by_title(book_title):
         if book.title == book_title:
             book_to_checkout = book
             break
-
     book.checked_out=True
     book.return_date=return_date
+
+def return_book_by_title(book_title):
+    book_to_return = None
+    for book in books:
+        if book.title == book_title:
+            book_to_return = book
+            break
+    book.checked_out=False
+    book.return_date=None
