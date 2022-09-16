@@ -5,13 +5,14 @@ from models.book_list import *
 
 @app.route('/books')
 def index():
-    return render_template('index.html', books=books)
+    return render_template('index.html', books=books, title="All Books")
 
 @app.route('/books/<index>')
 def book(index):
     book = books[int(index)]
     return render_template('book.html', book=book)
 
+#Configures settings for adding a book.
 @app.route('/books', methods = ['POST'])
 def add_book():
     book_title = request.form['title']
@@ -36,7 +37,6 @@ def add_book():
         book_author_link = author_first + "_" + author_second
         
     new_book = Book(book_title, book_author, book_genre, book_checked_out, book_return_date, book_author_link)
-
     add_new_book(new_book)
 
     return render_template('index.html', books = books)
@@ -55,3 +55,13 @@ def checkout_book(title):
 def return_book(title):
     return_book_by_title(title)
     return redirect('/books')
+
+#Configures settings for the facts page
+@app.route('/books/facts')
+def facts():
+    total_books = len(books)
+    total_checked_out=0
+    for book in books:
+        if book.checked_out:
+            total_checked_out += 1
+    return render_template ('facts.html', total_books=total_books, total_checked_out=total_checked_out)
