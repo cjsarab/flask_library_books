@@ -7,7 +7,14 @@
     {{ book.title }} was written by {{ book.author }}.
 </p>
 <p>
-    The genre is {{ book.genre }}
+    Genre: {{ book.genre }}
+</p>
+<p>
+    {% if book.checked_out %}
+    This book is checked out. It is due to be returned by {{ book.return_date.strftime('%d-%m-%Y') }}.
+    {% else %}
+    This book is available! Please return to home page to check out this book.
+    {% endif %}
 </p>
 
 {% endblock %}

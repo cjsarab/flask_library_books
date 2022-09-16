@@ -27,7 +27,7 @@
     <p>Availability?
 
         {% if book.checked_out %}
-        &#10060;  Sorry, this book is checked out! It is due back on {{ book.return_date.strftime('%d-%m-%Y') }}
+        &#10060;  Sorry, this book is checked out! It is due back on {{ book.return_date.strftime('%d-%m-%Y') }}.
         <form action="/books/return/{{ book.title }}" method="post">
 
             <label for="return_book">Return book?</label>
