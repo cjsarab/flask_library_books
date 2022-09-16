@@ -3,8 +3,10 @@
 {% block content %}
 
 <h3> {{ book.title }}</h3>
+    <p>
+    </p>
 <p>
-    {{ book.title }} was written by {{ book.author }}.
+    {{ book.title }} was written by <a href="https://en.wikipedia.org/wiki/{{ book.author_link }}" target = "blank"> {{ book.author }}</a>.
 </p>
 <p>
     Genre: {{ book.genre }}

@@ -3,12 +3,11 @@ from datetime import datetime, timedelta
 
 dt = datetime.now()
 td = timedelta(days=28)
-# your calculated date
 return_date = dt + td
 
-book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None)
-book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, return_date)
-book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None)
+book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None, "nelson_mandela")
+book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, return_date, "Fyodor_Dostoevsky")
+book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None, "jonathan_safran_foer")
 
 books = [book1, book2, book3]
 
