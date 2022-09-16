@@ -8,8 +8,12 @@ return_date = dt + td
 book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None, "nelson_mandela")
 book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, return_date, "Fyodor_Dostoevsky")
 book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None, "jonathan_safran_foer")
+book4 = Book("Harry Potter", "JK Rowling", "Childrens", True, return_date, "jk_rowling")
 
-books = [book1, book2, book3]
+books = [book1, book2, book3, book4]
+
+books.sort(key=lambda x: x.genre, reverse=False)
+
 
 def add_new_book(book):
     books.append(book)
