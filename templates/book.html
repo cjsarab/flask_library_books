@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h3> {{ book.title }}</h3>
+<p>
+    {{ book.title }} was written by {{ book.author }}.
+</p>
+<br>
+<p>
+    The genre is {{ book.genre }}
+</p>
+
+{% endblock %}

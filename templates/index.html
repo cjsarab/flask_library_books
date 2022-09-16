@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% for book in books %}
+    <p>
+        {{ book.title }} by {{ book.author }}. <a href="http://127.0.0.1:4999/books/{{books.index(book)}}">  Read more...</a>
+    </p>
+    {% endfor %}
+
+{% endblock %}
