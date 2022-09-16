@@ -1,10 +1,134 @@
+/* .color1 {color: #c9607c;}
+.color2 {color: #ca7761;}
+.color3 {color: #bf9a69;}
+.color4 {color: #b3b78a;}
+.color5 {color: #a8c8ac;} */
+
 body {
-    background-color:#34568B;
-    color:#ffffff;
+    background-color:#A7414A;
+    color: #000;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+
 }
 
-.nav-box {
-    background-color: goldenrod;
+a {
+    text-decoration: none;
+    color: #fff;
+}
 
+a:hover {
+    color: #282726;
+    text-decoration: underline;
+
+}
+
+.book-container {
+    background-color: #6A8A82;
+    border: 8px solid #282726;
+    border-radius: 15px;
+    padding:16px;
+    margin:16px auto;
+    width:75%;
+}
+
+.book-container a {
+    color: #fff;
+}
+
+.book-container a:hover {
+    color: #282726;
+    text-decoration: underline;
+}
+
+.nav-container {
+    background-color: #A37C27;
+    width: 40%;
+    margin:auto;
+    border: 8px solid #282726;
+    border-radius: 15px;
+    padding:0;
+    color:#282726;
+    font-size: x-large;
+}
+.nav-box {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.nav-box ul {
+    list-style:square;
+    color: #282726;
+}
+
+.nav-box ul li {
+}
+
+.title {
+    text-align: center;
+    text-decoration: solid;
+}
+
+.form-group {
+    padding: 16px;
+    background-color: #563838;
+    border:8px solid #282726;
+    border-radius: 15px;
+    margin: 16px auto;
+    width:11.5%;
+}
+
+.form-group label {
+    color:#fff;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+.form-group input[type="text"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:8px;
+    margin:8px auto;
+}
+
+.form-group-a input[type="submit"] {
+    width:auto;
+    background-color: #A37C27;
+    padding:9px 9px;
+    margin: 8px auto;
+    border: 2px solid #282726;
+    border-radius: 15px;
+}
+
+.form-group-a input[type="submit"]:hover {
+    background-color:goldenrod;
+    margin: 8px auto;
+}
+
+.form-group input[type="submit"] {
+    width:auto;
+    background-color: #A37C27;
+    padding:9px 9px;
+    margin: auto;
+    border: 2px solid #282726;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color:goldenrod;
+}
+
+.form-remove input[type="submit"] {
+    background-color: #A7414A;
+    padding:9px;
+    margin: 18px;
+    border: 2px solid #282726;
+    border-radius: 15px;
+}
+
+.form-remove input[type="submit"]:hover {
+    background-color: crimson;
 }
