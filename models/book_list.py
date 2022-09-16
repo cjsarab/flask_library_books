@@ -5,18 +5,19 @@ dt = datetime.now()
 td = timedelta(days=28)
 return_date = dt + td
 
-book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None, "nelson_mandela")
-book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, return_date, "Fyodor_Dostoevsky")
-book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None, "jonathan_safran_foer")
-book4 = Book("Harry Potter", "JK Rowling", "Childrens", True, return_date, "jk_rowling")
+book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None, "nelson_mandela", 3)
+book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, return_date, "Fyodor_Dostoevsky", 2)
+book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None, "jonathan_safran_foer", 4)
+book4 = Book("Harry Potter", "JK Rowling", "Childrens", True, return_date, "jk_rowling", 14)
 
 books = [book1, book2, book3, book4]
 
 books.sort(key=lambda x: x.genre, reverse=False)
 
-
 def add_new_book(book):
     books.append(book)
+    books.sort(key=lambda x: x.genre, reverse=False)
+
 
 def remove_book_by_title(book_title):
     book_to_delete = None
@@ -34,6 +35,7 @@ def checkout_book_by_title(book_title):
             break
     book.checked_out=True
     book.return_date=return_date
+    book.total_loans += 1
 
 def return_book_by_title(book_title):
     book_to_return = None

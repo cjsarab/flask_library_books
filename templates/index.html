@@ -31,7 +31,7 @@
         <form action="/books/return/{{ book.title }}" method="post">
 
             <label for="return_book">Return book?</label>
-            <input type="submit" value="Return Book?">
+            <input type="submit" value="Return Book">
         </form>
         {% else %}
         &#9989; This book is available!
@@ -39,7 +39,7 @@
         <form action="/books/checkout/{{ book.title }}" method="post">
 
             <label for="checkout_book">Checkout book?</label>
-            <input type="submit" value="Checkout Book?">
+            <input type="submit" value="Checkout Book">
         </form>
         {% endif %}
 
