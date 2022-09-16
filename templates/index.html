@@ -27,7 +27,7 @@
     <p>Availability?
 
         {% if book.checked_out %}
-        &#10060;  Sorry, this book is checked out! 
+        &#10060;  Sorry, this book is checked out! It is due back on {{ book.return_date.strftime('%d-%m-%Y') }}
 
         {% else %}
         &#9989; This book is available!

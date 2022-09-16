@@ -1,8 +1,9 @@
 from models.book import Book
+import datetime
 
-book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False)
-book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True)
-book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False)
+book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None)
+book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, datetime.date(2022, 10, 14))
+book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None)
 
 books = [book1, book2, book3]
 
