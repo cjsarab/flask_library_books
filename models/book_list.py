@@ -6,8 +6,8 @@ book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel")
 
 books = [book1, book2, book3]
 
-# def add_new_book(book):
-#     books.append(book)
+def add_new_book(book):
+    books.append(book)
 
-# def remove_book(book):
-#     books.remove(book)
+def remove_book(book):
+    books.remove(book)
