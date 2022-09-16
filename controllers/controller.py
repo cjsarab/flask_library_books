@@ -17,8 +17,10 @@ def add_book():
     book_title = request.form['title']
     book_author = request.form['author']
     book_genre = request.form['genre']
+    book_checked_out = False
+    book_return_date = None
 
-    new_book = Book(book_title, book_author, book_genre)
+    new_book = Book(book_title, book_author, book_genre, book_checked_out, book_return_date)
 
     add_new_book(new_book)
 

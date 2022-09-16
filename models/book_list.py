@@ -1,8 +1,13 @@
 from models.book import Book
-import datetime
+from datetime import datetime, timedelta
+
+dt = datetime.now()
+td = timedelta(days=28)
+# your calculated date
+return_date = dt + td
 
 book1 = Book("Long Walk to Freedom", "Nelson Mandela", "Autobiography", False, None)
-book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, datetime.date(2022, 10, 14))
+book2 = Book("The Brothers Karamazov", "Fyodor Dostoevsky", "Novel", True, return_date)
 book3 = Book("Everything is Illuminated", "Jonathan Safran Foer", "Novel", False, None)
 
 books = [book1, book2, book3]
@@ -27,3 +32,4 @@ def checkout_book_by_title(book_title):
             break
 
     book.checked_out=True
+    book.return_date=return_date
