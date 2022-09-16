@@ -24,9 +24,25 @@
     <p>
         {{ book.title }} by {{ book.author }}. <a href="http://127.0.0.1:4999/books/{{books.index(book)}}">  Read more...</a>
     </p>
+    <p>Availability?
+
+        {% if book.checked_out %}
+        &#10060;  Sorry, this book is checked out! 
+
+        {% else %}
+        &#9989; This book is available!
+        
+        <form action="/books/checkout/{{ book.title }}" method="post">
+
+            <label for="checkout_book">Checkout book?</label>
+            <input type="submit" value="Checkout Book?">
+        </form>
+        {% endif %}
+
+    </p>
     <form action="/books/delete/{{ book.title }}" method="post">
 
-        <label for="delete_book">Remove</label>
+        <label for="delete_book">Remove book from Library? </label>
         <input type="submit" value="Remove Book">
 
     </form>
