@@ -20,6 +20,8 @@ def add_book():
     book_genre = request.form['genre']
     book_checked_out = False
     book_return_date = None
+    book_total_loans = 0
+
 
     book_author_list = book_author.split()
     author_first = str(book_author_list[0])
@@ -36,7 +38,7 @@ def add_book():
     else:
         book_author_link = author_first + "_" + author_second
         
-    new_book = Book(book_title, book_author, book_genre, book_checked_out, book_return_date, book_author_link)
+    new_book = Book(book_title, book_author, book_genre, book_checked_out, book_return_date, book_author_link, book_total_loans)
     add_new_book(new_book)
 
     return render_template('index.html', books = books)
