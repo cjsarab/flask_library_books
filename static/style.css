@@ -1,9 +1,3 @@
-/* .color1 {color: #c9607c;}
-.color2 {color: #ca7761;}
-.color3 {color: #bf9a69;}
-.color4 {color: #b3b78a;}
-.color5 {color: #a8c8ac;} */
-
 body {
     background-color:#A7414A;
     color: #000;
@@ -131,4 +125,11 @@ a:hover {
 
 .form-remove input[type="submit"]:hover {
     background-color: crimson;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 64px;
+    font-size: large;
 }
